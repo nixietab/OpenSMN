@@ -1,0 +1,6 @@
+requests
+selenium
+flask
+uvicorn[standard]
+python-dotenv
+asgiref
