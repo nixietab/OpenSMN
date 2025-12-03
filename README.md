@@ -73,6 +73,6 @@ location /smn/ {
 
 ## Licencia
 
-El proyecto de openSMN es de código abierto y está licenciado bajo la GNU General Public License v2.0. no obstante, interacciona con el Servicio Meteorológico Nacional (SMN) de Argentina, servicio de codigo privativo.
+El proyecto openSMN es de código abierto y se distribuye bajo la licencia GNU General Public License v2.0. Sin embargo, interactúa con el Servicio Meteorológico Nacional (SMN) de Argentina, el cual es de carácter privativo.
 
-No hay asociacion con este proyecto con el SMN ni con el gobierno argentino de ninguna manera
+openSMN no mantiene ninguna relación, afiliación ni respaldo oficial por parte del SMN ni del Gobierno Argentino.
