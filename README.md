@@ -60,7 +60,7 @@ Authorization: clave_ultra_segura
 
 ## Despliegue con Reverse Proxy
 
-Para producción, es altamente recomendado usar un reverse proxy como nginx:
+Para producción, es altamente recomendado usar un reverse proxy como nginx, esto es un ejemplo de como configurarlo:
 
 ```nginx
 location /smn/ {
@@ -68,11 +68,20 @@ location /smn/ {
     proxy_set_header Host $host;
     proxy_set_header X-Real-IP $remote_addr;
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    
+    # Rate limiting adicional a nivel de nginx (opcional)
+    limit_req zone=api_limit burst=20 nodelay;
+    
+    # Timeouts
+    proxy_connect_timeout 10s;
+    proxy_send_timeout 10s;
+    proxy_read_timeout 30s;
 }
 ```
 
 ## Licencia
 
-El proyecto openSMN es de código abierto y se distribuye bajo la licencia GNU General Public License v2.0. Sin embargo, interactúa con el Servicio Meteorológico Nacional (SMN) de Argentina, el cual es de carácter privativo.
+El proyecto OpenSMN es de código abierto y se distribuye bajo la licencia GNU General Public License v2.0. Sin embargo, interactúa con el Servicio Meteorológico Nacional (SMN) de Argentina, el cual es de carácter privativo.
 
-openSMN no mantiene ninguna relación, afiliación ni respaldo oficial por parte del SMN ni del Gobierno Argentino.
+OpenSMN no mantiene ninguna relación, afiliación ni respaldo oficial por parte del SMN ni del Gobierno Argentino.

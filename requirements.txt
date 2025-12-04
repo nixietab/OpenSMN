@@ -1,6 +1,7 @@
 requests
 selenium
 flask
+flask-limiter
 uvicorn[standard]
 python-dotenv
 asgiref
