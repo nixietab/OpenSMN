@@ -4,6 +4,15 @@
 
 OpenSMN es una API opensource que actúa como proxy del Servicio Meteorológico Nacional (SMN) de Argentina, ofreciendo una forma sencilla y privada de acceder a sus datos públicos.
 
+## ¿Por qué es necesaria esta API?
+
+El Servicio Meteorológico Nacional de Argentina **no cuenta con una API pública completa y accesible**. Aunque existe un endpoint oficial, este presenta serias limitaciones:
+
+- **Requiere autenticación obligatoria**: El acceso a los datos meteorológicos públicos está bloqueado detrás de un sistema de tokens.
+- **Obtención poco transparente del token**: El token de autenticación no se puede obtener mediante un proceso oficial documentado; la única forma de conseguirlo es mediante scraping de la página web del SMN.
+- **Falta de documentación**: No existe documentación oficial sobre cómo utilizar correctamente el endpoint o cómo solicitar credenciales de acceso.
+- **Barreras innecesarias**: Para datos que deberían ser de acceso público y libre, se imponen restricciones técnicas que dificultan su uso por parte de desarrolladores, investigadores y ciudadanos.
+
 ## Requisitos
 
 - Python 3.7+
