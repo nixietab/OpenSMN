@@ -204,6 +204,10 @@ def smn_proxy(subpath):
         return add_security_headers(make_response(jsonify({"error": "Invalid path"}), 400))
 
     url = urljoin(BASE_API + "/", subpath)
+    
+    # Forward query parameters to upstream API
+    if request.query_string:
+        url += "?" + request.query_string.decode('utf-8')
 
     # Check cache
     cached = load_cache(url)
