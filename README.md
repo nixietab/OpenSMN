@@ -1,3 +1,5 @@
+<img width="114" height="67" alt="OpenSMN logo, Un pato" src="https://github.com/user-attachments/assets/66613c67-e68c-4889-aebe-a03c0448273c" />
+
 # OpenSMN
 
 OpenSMN es una API opensource que actúa como proxy del Servicio Meteorológico Nacional (SMN) de Argentina, ofreciendo una forma sencilla y privada de acceder a sus datos públicos.
